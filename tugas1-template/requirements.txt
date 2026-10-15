@@ -1,0 +1,19 @@
+# Dependensi Tugas 1 - Analisis Big Data
+# Format: nama[extra]>=versi-minimal
+
+# Mesin data (wajib)
+polars[pyarrow]>=1.20.0
+duckdb>=1.2.0
+pyarrow>=18.0.0
+
+# Visualisasi interaktif
+plotly>=6.0.0
+altair>=5.5.0
+
+# Environment notebook
+jupyterlab>=4.2.0
+jupytext>=1.16.0
+
+# Autograding / CI
+ruff>=0.8.0
+pytest>=8.3.0

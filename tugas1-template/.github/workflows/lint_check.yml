@@ -1,0 +1,35 @@
+name: Autograding
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  lint-and-test:
+    name: Format, Lint & Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Cek format (ruff format)
+        run: ruff format --check .
+
+      - name: Cek lint (ruff check)
+        run: ruff check .
+
+      - name: Uji script data loading (pytest)
+        run: pytest

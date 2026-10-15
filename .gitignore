@@ -26,5 +26,8 @@
 !docker-compose.yaml
 !.dockerignore
 
+# Template Tugas 1 (materi pendukung)
+!tugas1-template/**
+
 # Jangan sertakan checkpoint notebook
 **/.ipynb_checkpoints/**

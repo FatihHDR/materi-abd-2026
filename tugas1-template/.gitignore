@@ -1,0 +1,19 @@
+# Data mentah tidak di-commit ke Git
+data/raw/
+data/processed/
+*.parquet
+*.csv
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# OS
+.DS_Store
